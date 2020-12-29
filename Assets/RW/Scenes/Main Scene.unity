@@ -453,11 +453,131 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appliedPreset: 0
   presets:
-  - objectName: sd
+  - objectName: Unnamed Preset
     color: {r: 0, g: 0, b: 0, a: 0}
     size: {x: 1, y: 1, z: 1}
-    rotation: {x: 1, y: 1, z: 1}
-    animationSpeed: 1
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
+    isAnimating: 1
+  - objectName: Unnamed Preset
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: {x: 1, y: 1, z: 1}
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
     isAnimating: 1
   - objectName: Unnamed Preset
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -467,11 +587,11 @@ MonoBehaviour:
     isAnimating: 1
   animator: {fileID: 1898620990}
   currentlyEditing:
-    objectName: sd
+    objectName: Unnamed Preset
     color: {r: 0, g: 0, b: 0, a: 0}
     size: {x: 1, y: 1, z: 1}
-    rotation: {x: 1, y: 1, z: 1}
-    animationSpeed: 1
+    rotation: {x: 0, y: 0, z: 0}
+    animationSpeed: 0
     isAnimating: 1
 --- !u!95 &1898620990
 Animator:
