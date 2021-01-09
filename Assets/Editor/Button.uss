@@ -1,5 +1,0 @@
-﻿#lala {
- font-size: 20px;
-    -unity-font-style: bold;
-    color: rgb(68, 138, 255);
-}

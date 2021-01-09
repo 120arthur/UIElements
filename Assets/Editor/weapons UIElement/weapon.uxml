@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+>
+  <engine:VisualElement name="uperButtonContainer">
+    <engine:Button class="ButtonList" text="New object" />
+    <engine:Button class="ButtonList" text="Delet object" />
+  </engine:VisualElement>
+
+  <engine:VisualElement name="lineContainer">
+    <engine:VisualElement class ="line"></engine:VisualElement>
+  </engine:VisualElement>
+  
+  <engine:VisualElement name="container">
+    
+    <engine:VisualElement name="RightPanel" >
+
+      <engine:ListView name="ListView"/>  
+    
+    </engine:VisualElement>  
+
+    <engine:VisualElement name="LeftPanel" >
+      <editor:ObjectField name="SpriteField" />
+      <editor:ObjectField name="ObjectToInstantiate" />
+      <engine:VisualElement class ="line"></engine:VisualElement>
+      <editor:ObjectField name="PivotField" />
+      <engine:Button name="ButtonInstance" class="ButtonList" text="Instanciate"/>
+    </engine:VisualElement>  
+  
+  </engine:VisualElement>
+</engine:UXML>
