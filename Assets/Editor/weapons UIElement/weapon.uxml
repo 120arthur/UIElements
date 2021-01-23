@@ -6,8 +6,8 @@
     xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
 >
   <engine:VisualElement name="uperButtonContainer">
-    <engine:Button class="ButtonList" text="New object" />
-    <engine:Button class="ButtonList" text="Delet object" />
+    <engine:Button name="NewObject" class="ButtonList" text="New object" />
+    <engine:Button name="DelectObject" class="ButtonList" text="Delet object" />
   </engine:VisualElement>
 
   <engine:VisualElement name="lineContainer">
@@ -23,6 +23,7 @@
     </engine:VisualElement>  
 
     <engine:VisualElement name="LeftPanel" >
+      <engine:TextField name ="TextField" />
       <editor:ObjectField name="SpriteField" />
       <editor:ObjectField name="ObjectToInstantiate" />
       <engine:VisualElement class ="line"></engine:VisualElement>

@@ -50,6 +50,7 @@ public class PresetObject : MonoBehaviour
     //This method can be called to change this GameObject's properties based on a Preset
     public void ApplyPreset(Preset preset)
     {
+       
         //Changing the name of the object
         transform.name = preset.objectName;
 
@@ -83,7 +84,7 @@ public class PresetObject : MonoBehaviour
 
         if (presets[appliedPreset] != null)
         {
-            ApplyPreset(presets[appliedPreset]);
+          // ApplyPreset(presets[appliedPreset]);
         }
 
     }

@@ -48,15 +48,17 @@
 {
 	height: auto;
 	width: auto;
-	border-radius: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0;
-	padding-bottom: 0;
+	border-radius: 5;
+	padding-left: 5;
+	padding-right: 5;
+	padding-top: 5;
+	padding-bottom: 5;
 }
-.ListText{
--unity-text-align: upper-center;
--unity-font-style: bold; 
+
+.ListText
+{
+    -unity-text-align: upper-center;
+    -unity-font-style: bold; 
 }
 
 .SelectedListButton
@@ -66,12 +68,12 @@
 	background-color: rgba(100,100,100,1);
 }
 
-.ImageContainer{
-height: 200px;	
-width: 200px;	
-background-color: rgba(170,170,170,1);
+.ImageContainer
+{
+    height: 200px;	
+    width: 200px;	
+    background-color: rgba(170,170,170,1);
 }
-
 
 .ListLabel
 {
@@ -83,7 +85,6 @@ background-color: rgba(170,170,170,1);
 	min-height: 30px;	
 	-unity-text-align: middle-center;
 }
-
 
 #RightBottomPanel *
 {
@@ -144,6 +145,24 @@ Button:active
 	min-width: 50px;
 	margin-left: 50px;
 	margin-right:50px;
+}
+#TextField
+{
+    flex: 0.05;
+	margin-top: 15px;
+	min-width: 50px;
+	margin-left: 50px;
+	margin-right:50px;
+}
+
+#PressetWeaponField 
+{
+	flex: 0.04;
+	margin-top: 15px;
+	min-width: 100px;
+	margin-left: 50px;
+	margin-right:50px;
+	height: 25px;
 }
 
 #PivotField 

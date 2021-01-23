@@ -109,7 +109,7 @@ public class PresetWindow : EditorWindow
 
     private void PopulatePresetList()
     {
-        ListView list = (ListView)rootVisualElement.Q<ListView>("ListView");
+        ListView list = rootVisualElement.Q<ListView>("ListView");
         list.Clear();
 
         //Keeping track of what button links to each preset index
@@ -194,8 +194,8 @@ public class PresetWindow : EditorWindow
         SerializedProperty objectName = presetManagerSerialized.FindProperty("currentlyEditing.objectName");
         SerializedProperty objectColor = presetManagerSerialized.FindProperty("currentlyEditing.color");
         SerializedProperty objectSize = presetManagerSerialized.FindProperty("currentlyEditing.size");
-        SerializedProperty objectRotation = presetManagerSerialized.FindProperty("currentlyEditing.rotation");
-        SerializedProperty objectAnimationSpeed = presetManagerSerialized.FindProperty("currentlyEditing.animationSpeed");
+        SerializedProperty objectRotation = presetManagerSerialized.FindProperty("crrentlyEditing.rotation");
+        SerializedProperty objectAnimationSpeed = presetManagerSerialized.FindProperty("curreuntlyEditing.animationSpeed");
         SerializedProperty objectIsAnimating = presetManagerSerialized.FindProperty("currentlyEditing.isAnimating");
 
         //Binding those properties to the corresponding element
