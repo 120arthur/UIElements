@@ -13,23 +13,27 @@
   <engine:VisualElement name="lineContainer">
     <engine:VisualElement class ="line"></engine:VisualElement>
   </engine:VisualElement>
-  
+
   <engine:VisualElement name="container">
-    
+
     <engine:VisualElement name="RightPanel" >
 
-      <engine:ListView name="ListView"/>  
-    
-    </engine:VisualElement>  
+      <engine:ListView name="ListView"/>
+
+    </engine:VisualElement>
 
     <engine:VisualElement name="LeftPanel" >
+      <engine:TextElement text="Name of weapon" class="Text"/>
       <engine:TextField name ="TextField" />
+      <engine:TextElement text="Image of weapon" class="Text"/>
       <editor:ObjectField name="SpriteField" />
+      <engine:TextElement text="Object to instantiate" class="Text"/>
       <editor:ObjectField name="ObjectToInstantiate" />
       <engine:VisualElement class ="line"></engine:VisualElement>
+      <engine:TextElement text="where it will be instantiated" class="Text"/>
       <editor:ObjectField name="PivotField" />
       <engine:Button name="ButtonInstance" class="ButtonList" text="Instanciate"/>
-    </engine:VisualElement>  
-  
+    </engine:VisualElement>
+
   </engine:VisualElement>
 </engine:UXML>

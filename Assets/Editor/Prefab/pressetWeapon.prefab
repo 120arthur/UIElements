@@ -44,14 +44,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyWeapon: {fileID: 21300000, guid: 24f72f835a4a3874d81855acf582a6f7, type: 3}
-  appliedPresetWeapon: 0
   presetsWeapon:
-  - weapon: {fileID: 0}
-    weaponName: sdsdsdsd
+  - weapon: {fileID: 4014832878496515737, guid: 00317a7763c261b47879fb89d739c96a,
+      type: 3}
+    weaponName: gun 1
     weaponImage: {fileID: 21300000, guid: d8d2b6715b734f940a47764f63d404eb, type: 3}
     weaponTansform: {fileID: 0}
-  - weapon: {fileID: 0}
-    weaponName: sdsdsdsdsd
+  - weapon: {fileID: 688996637513245249, guid: 8c8c0d8f5f23e214698ef10faf4d082e, type: 3}
+    weaponName: gun 2
+    weaponImage: {fileID: 21300000, guid: 9b2fcd33a441a0643b4e222a81eeb19c, type: 3}
+    weaponTansform: {fileID: 0}
+  - weapon: {fileID: 688996637513245249, guid: 8c8c0d8f5f23e214698ef10faf4d082e, type: 3}
+    weaponName: 'gun 3 '
     weaponImage: {fileID: 21300000, guid: 34437fce2bed4e84c9475a437d11c710, type: 3}
     weaponTansform: {fileID: 0}
   - weapon: {fileID: 0}
@@ -59,7 +63,7 @@ MonoBehaviour:
     weaponImage: {fileID: 0}
     weaponTansform: {fileID: 0}
   CurrentlyEditing:
-    weapon: {fileID: 0}
-    weaponName: sdsdsdsd
-    weaponImage: {fileID: 21300000, guid: d8d2b6715b734f940a47764f63d404eb, type: 3}
+    weapon: {fileID: 688996637513245249, guid: 8c8c0d8f5f23e214698ef10faf4d082e, type: 3}
+    weaponName: gun 2
+    weaponImage: {fileID: 21300000, guid: 9b2fcd33a441a0643b4e222a81eeb19c, type: 3}
     weaponTansform: {fileID: 0}

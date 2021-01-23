@@ -40,7 +40,7 @@
 {
 	display: flex;
 	flex-direction: column;
-	align-self: center
+	align-self: center;
 	width: 223px;
 }
 
@@ -59,6 +59,16 @@
 {
     -unity-text-align: upper-center;
     -unity-font-style: bold; 
+}
+.Text
+{
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+	flex: 0.05;
+	margin-top: 15px;
+	min-width: 50px;
+	margin-left: 50px;
+	margin-right:50px;
 }
 
 .SelectedListButton
@@ -132,7 +142,6 @@ Button:active
 #ObjectToInstantiate 
 {
 	flex: 0.05;
-	margin-top: 15px;
 	min-width: 50px;
 	margin-left: 50px;
 	margin-right:50px;
@@ -141,15 +150,14 @@ Button:active
 #SpriteField 
 {
 	flex: 0.05;
-	margin-top: 15px;
 	min-width: 50px;
 	margin-left: 50px;
 	margin-right:50px;
 }
+
 #TextField
 {
     flex: 0.05;
-	margin-top: 15px;
 	min-width: 50px;
 	margin-left: 50px;
 	margin-right:50px;
@@ -158,7 +166,6 @@ Button:active
 #PressetWeaponField 
 {
 	flex: 0.04;
-	margin-top: 15px;
 	min-width: 100px;
 	margin-left: 50px;
 	margin-right:50px;
@@ -168,7 +175,6 @@ Button:active
 #PivotField 
 {
 	flex: 0.05;
-	margin-top: 15px;
 	min-width: 50px;
 	margin-left: 50px;
 	margin-right:50px;

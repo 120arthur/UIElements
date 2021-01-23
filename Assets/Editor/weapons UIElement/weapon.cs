@@ -12,21 +12,24 @@ public class weapon : EditorWindow
         weapon wnd = GetWindow<weapon>();
         wnd.titleContent = new GUIContent("weapon");
     }
-    private PresetWeaponObject t;
+
+    private PresetWeaponObject queryPrefabWithPresetWeaponScript;
     private PresetWeaponObject presetWeaponManager;
     private PresetWeapon selectedWeaponPreset;
-    private ObjectField presetWeaponObjectField;
 
-    ObjectField ObjectToInstantiate;
-    ObjectField ObjectImageReference;
-    ObjectField PivotInstantiate;
-    TextField nameWeapon;
 
-    TextElement NameOfObject;
-    VisualElement ImageContainer;
+    private TextField nameWeapon;
+    private ObjectField ObjectImageReference;
+    private ObjectField ObjectToInstantiate;
+    private ObjectField PivotInstantiate;
+    private Button instantiateButton;
 
-    int weaponSelected;
-    bool isEditingAPresset;
+  
+    private TextElement NameOfObject;
+    private VisualElement ImageContainer;
+
+    private int weaponSelected;
+    private bool isEditingAPresset;
 
     private bool gameObjectIsEmpty = true;
     private bool pivotIsEmpty = true;
@@ -50,9 +53,9 @@ public class weapon : EditorWindow
         root.styleSheets.Add(PressetTemplate);
         root.styleSheets.Add(styleSheet);
 
-        t = (PresetWeaponObject)AssetDatabase.LoadAssetAtPath("Assets/Editor/Prefab/pressetWeapon.prefab", typeof(PresetWeaponObject));
+        queryPrefabWithPresetWeaponScript = (PresetWeaponObject)AssetDatabase.LoadAssetAtPath("Assets/Editor/Prefab/pressetWeapon.prefab", typeof(PresetWeaponObject));
 
-        presetWeaponManager = t;
+        presetWeaponManager = queryPrefabWithPresetWeaponScript;
         SetupControls();
         PopulatePresetList();
     }
@@ -71,7 +74,7 @@ public class weapon : EditorWindow
         nameWeapon = rootVisualElement.Q<TextField>("TextField");
 
 
-        Button instantiateButton = rootVisualElement.Q<Button>("ButtonInstance");
+        instantiateButton = rootVisualElement.Q<Button>("ButtonInstance");
         instantiateButton.visible = false;
 
         Button newObject = rootVisualElement.Q<Button>("NewObject");
@@ -80,13 +83,10 @@ public class weapon : EditorWindow
         //callbacks
         instantiateButton.clickable.clicked += () =>
         {
-            Debug.Log("clicou no botão");
             presetWeaponManager.InstantiateWeapon();
         };
         newObject.clickable.clicked += () =>
         {
-            Debug.Log("NewObject");
-
             if (presetWeaponManager != null)
             {
                 PresetWeapon newPressetWeapon = new PresetWeapon();
@@ -106,36 +106,6 @@ public class weapon : EditorWindow
             BindControls();
 
         };
-        ObjectToInstantiate.RegisterCallback<ChangeEvent<Object>>(e =>
-        {
-            if (ObjectToInstantiate.value != null)
-            {
-
-                gameObjectIsEmpty = false;
-                Debug.Log("objeto não esta vazio");
-            }
-            else
-            {
-
-                gameObjectIsEmpty = true;
-                Debug.Log("objeto esta vazio");
-            }
-            ButonVisibility(instantiateButton);
-        });
-        PivotInstantiate.RegisterCallback<ChangeEvent<Object>>(e =>
-        {
-            if (PivotInstantiate.value != null)
-            {
-                pivotIsEmpty = false;
-                Debug.Log("objeto não esta vazio");
-            }
-            else
-            {
-                pivotIsEmpty = true;
-                Debug.Log("objeto esta vazio");
-            }
-            ButonVisibility(instantiateButton);
-        });
     }
 
     private void PopulatePresetList()
@@ -200,7 +170,7 @@ public class weapon : EditorWindow
             //Assigning action to the button
             listButton.clickable.clicked += () =>
             {
-                if (t != null)
+                if (queryPrefabWithPresetWeaponScript != null)
                 {
                     LoadPreset(buttonDictionary[listButton]);
                 }
@@ -225,7 +195,6 @@ public class weapon : EditorWindow
     {
         if (presetWeaponManager != null)
         {
-            Debug.Log("entrou no load presset");
             selectedWeaponPreset = presetWeaponManager.presetsWeapon[elementID];
             presetWeaponManager.CurrentlyEditing = selectedWeaponPreset;
 
@@ -245,6 +214,7 @@ public class weapon : EditorWindow
 
     private void BindControls()
     {
+        //connecting currentlyEditing with the UI
         nameWeapon.value = presetWeaponManager.CurrentlyEditing.weaponName;
         nameWeapon.RegisterCallback<ChangeEvent<string>>(e =>
         {
@@ -260,6 +230,17 @@ public class weapon : EditorWindow
         ObjectToInstantiate.RegisterCallback<ChangeEvent<Object>>(e =>
         {
             presetWeaponManager.CurrentlyEditing.weapon = (GameObject)ObjectToInstantiate.value;
+
+            if (ObjectToInstantiate.value != null)
+            {
+                gameObjectIsEmpty = false;
+            }
+            else
+            {
+                gameObjectIsEmpty = true;
+            }
+            ButonVisibility(instantiateButton);
+
         });
 
         ObjectImageReference.value = presetWeaponManager.CurrentlyEditing.weaponImage;
@@ -268,7 +249,6 @@ public class weapon : EditorWindow
             presetWeaponManager.CurrentlyEditing.weaponImage = (Sprite)ObjectImageReference.value;
             if (isEditingAPresset == true)
             {
-                Debug.Log("true " + weaponSelected);
 
                 if (presetWeaponManager.presetsWeapon[weaponSelected].weaponImage != null)
                 {
@@ -284,12 +264,22 @@ public class weapon : EditorWindow
         PivotInstantiate.RegisterCallback<ChangeEvent<Object>>(e =>
         {
             presetWeaponManager.CurrentlyEditing.weaponTansform = (Transform)PivotInstantiate.value;
+
+            if (PivotInstantiate.value != null)
+            {
+                pivotIsEmpty = false;
+            }
+            else
+            {
+                pivotIsEmpty = true;
+            }
+            ButonVisibility(instantiateButton);
         });
 
     }
 
     private void ButonVisibility(Button instantiateButton)
-    {
+    {   // Check if the "instantiate" button can be activated
         if (gameObjectIsEmpty == true || pivotIsEmpty == true)
         {
             instantiateButton.visible = false;
